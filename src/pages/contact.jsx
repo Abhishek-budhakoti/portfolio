@@ -43,7 +43,7 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="text-black dark:text-white transition-colors duration-500 min-h-screen flex items-center justify-center px-4 py-12"
+      className="text-black dark:text-white transition-colors duration-500 min-h-screen flex items-center justify-center px-4 py-40"
     >
       <form
         onSubmit={handleSubmit}
