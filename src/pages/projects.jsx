@@ -11,7 +11,7 @@ export const Projects = () => {
           className="flex flex-col md:flex-row gap-6 mb-12 items-center"
         >
 
-          <div className="md:w-72 md:h-60 w-full h-48 shrink-0">
+          <div className="md:w-100 md:h-50 w-full h-48 shrink-0">
             <a
               href={project.link}
               target="_blank"
@@ -20,7 +20,7 @@ export const Projects = () => {
               <img
                 src={project.image}
                 alt={project.alter}
-                className="block w-full h-full object-cover rounded-xl shadow hover:opacity-90 transition-opacity duration-300"
+                className="block w-80 h-50 object-cover rounded-xl  hover:opacity-90 transition-opacity duration-300"
               />
             </a>
           </div>
