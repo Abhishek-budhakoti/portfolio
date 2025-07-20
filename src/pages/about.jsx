@@ -17,7 +17,7 @@ export const About = () => {
       id="about"
       className="flex flex-col md:flex-row items-center md:items-start gap-12 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 pt-10 md:pt-5 pb-20"
     >
-      {/* Image - from left */}
+   
       <motion.div
         variants={imageVariants}
         initial="hidden"
@@ -32,7 +32,7 @@ export const About = () => {
         />
       </motion.div>
 
-      {/* About Content - from right */}
+    
       <motion.div
         variants={textVariants}
         initial="hidden"

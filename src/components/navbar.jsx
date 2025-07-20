@@ -31,14 +31,14 @@ const itemVariants = {
 export const Navbar = () => {
   return (
     <>
-      {/* Animated Navbar Container */}
+
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="show"
         className="flex fixed flex-col pt-8 pl-12 gap-5 bg-transparent text-black dark:text-white transition-colors duration-500 h-full z-50"
       >
-        {/* Animated Logo */}
+     
         <motion.div variants={itemVariants}>
           <Link
             to={SECTION_IDS.ABOUT}
@@ -55,7 +55,7 @@ export const Navbar = () => {
           </Link>
         </motion.div>
 
-        {/* Animated Navigation Links */}
+     
         <motion.nav
           variants={containerVariants}
           className="[writing-mode:vertical-lr] flex gap-x-7 space-y-6 text-xl"
@@ -79,7 +79,7 @@ export const Navbar = () => {
         </motion.nav>
       </motion.div>
 
-      {/* Static Resume Button */}
+      
       <a
         href="/Abhishek's-Resume.pdf"
         target="_blank"
