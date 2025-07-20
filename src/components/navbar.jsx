@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
 import { SECTION_IDS } from "../utils/const";
 
 const navItems = [
@@ -9,43 +10,76 @@ const navItems = [
   { id: SECTION_IDS.CONTACT, label: "Contact" },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0, x: -50 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      staggerChildren: 0.50,
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0 },
+};
+
 export const Navbar = () => {
   return (
     <>
-      <div className="flex fixed flex-col pt-8 pl-12 gap-5 bg-transparent text-black dark:text-white transition-colors duration-500 h-full">
-        <Link
-          to={SECTION_IDS.ABOUT}
-          spy={true}
-          smooth={true}
-          duration={500}
-          offset={-80}
-          containerId="scroll-container"
-          className="cursor-pointer"
+      {/* Animated Navbar Container */}
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="show"
+        className="flex fixed flex-col pt-8 pl-12 gap-5 bg-transparent text-black dark:text-white transition-colors duration-500 h-full z-50"
+      >
+        {/* Animated Logo */}
+        <motion.div variants={itemVariants}>
+          <Link
+            to={SECTION_IDS.ABOUT}
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-80}
+            containerId="scroll-container"
+            className="cursor-pointer"
+          >
+            <div className="dark:bg-amber-50 p-1 rounded-full">
+              <img src="./logo2.png" alt="Logo" className="w-12 h-12" />
+            </div>
+          </Link>
+        </motion.div>
+
+        {/* Animated Navigation Links */}
+        <motion.nav
+          variants={containerVariants}
+          className="[writing-mode:vertical-lr] flex gap-x-7 space-y-6 text-xl"
         >
-          <div className="dark:bg-amber-50 p-1 rounded-full">
-            <img src="./logo2.png" alt="Logo" className="w-12 h-12" />
-          </div>
-        </Link>
-
-        <nav className="[writing-mode:vertical-lr] flex gap-x-7 space-y-6 text-xl">
           {navItems.map(({ id, label }) => (
-            <Link
-              key={id}
-              to={id}
-              spy={true}
-              smooth={true}
-              duration={500}
-              offset={-80}
-              containerId="scroll-container"
-              activeClass="text-blue-400 font-semibold"
-              className="cursor-pointer transition-all hover:text-blue-400"
-            >
-              {label}
-            </Link>
+            <motion.div key={id} variants={itemVariants}>
+              <Link
+                to={id}
+                spy={true}
+                smooth={true}
+                duration={500}
+                offset={-80}
+                containerId="scroll-container"
+                activeClass="text-blue-400 font-semibold"
+                className="cursor-pointer transition-all hover:text-blue-400"
+              >
+                {label}
+              </Link>
+            </motion.div>
           ))}
-        </nav>
-      </div>
+        </motion.nav>
+      </motion.div>
 
+      {/* Static Resume Button */}
       <a
         href="/Abhishek's-Resume.pdf"
         target="_blank"
