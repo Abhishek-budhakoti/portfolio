@@ -23,8 +23,12 @@ export const About = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="h-48 sm:w-64 sm:h-100 md:w-[320px] md:h-[400px] dark:bg-white bg-black rounded-xl border-2 border-black dark:border-white overflow-hidden"
-      >
+      className="h-48 sm:w-64 sm:h-100 md:w-[320px] md:h-[400px] 
+bg-gradient-to-br from-[#0f172a] via-[#3f5271] to-[#63758f]
+  dark:bg-gradient-to-b dark:from-[#ffffff] dark:via-[#e0f7fa] dark:to-[#b2ebf2] 
+  rounded-xl border-2 border-black dark:border-white overflow-hidden"
+  >
+
         <img
           src="/photo.png"
           alt="myphoto"

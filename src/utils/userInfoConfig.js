@@ -3,7 +3,7 @@ import Lang from "./lang";
 const userInfo = {
   about: {
     greeting: "Hello There!",
-    aboutMe: `My name is ${Lang.name},I am from yammun nagar,Haryan and my belongings are from garhwal(uttrakhand),passed my graduation in BCA(Bachelors of computer application) in 2025 from JMIT,radaur which is affilated by kurukshetra university
+    aboutMe: `My name is ${Lang.name},I am from yammun nagar,Haryana and my belongings are from garhwal(uttrakhand),passed my graduation in BCA(Bachelors of computer application) in 2025 from JMIT,radaur which is affilated by kurukshetra university
          I'm a passionate and self-driven web developer with a strong foundation in HTML, CSS, JavaScript, and modern frameworks like React.js. I enjoy transforming ideas into interactive and visually appealing web experiences. While I may be new to the industry, I’m constantly learning and building projects that challenge and grow my skills. I’m excited to collaborate, contribute, and grow in real-world development environments.
          `,
     skills: [
@@ -36,7 +36,7 @@ const userInfo = {
       description: `The Async Invoice Project is a modern, single-page application built with React.js that allows users to create, preview, and manage invoices asynchronously. It offers a smooth, responsive interface designed for freelancers, businesses, or service providers needing lightweight invoice automation.`,
       link: '',
       alter: 'async-invoice',
-      image: './photo.jpg',
+      image: './invoice.png',
     },
     {
       id: 2,
