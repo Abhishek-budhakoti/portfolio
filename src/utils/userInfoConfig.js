@@ -3,8 +3,9 @@ import Lang from "./lang";
 const userInfo = {
   about: {
     greeting: "Hello There!",
-    aboutMe: `My name is ${Lang.name},I live in yammuna nagar,Haryana but i belong to garhwal(uttrakhand),Completed my graduation in BCA(Bachelors of computer application) in 2025 from JMIT,radaur which is affilated by kurukshetra university.
-         I'm a passionate and self-driven web developer with a strong foundation in HTML, CSS, JavaScript, and modern frameworks like React.js. I enjoy transforming ideas into interactive and visually appealing web experiences. While I may be new to the industry, I’m constantly learning and building projects that challenge and grow my skills. I’m excited to collaborate, contribute, and grow in real-world development environments.
+    aboutMe: `My name is ${Lang.name} and I’m from Yamunanagar, Haryana. I completed my graduation in 2025 with a Bachelor's degree in Computer Applications (BCA) from JMIT, an affiliated college of Kurukshetra University.
+
+I’m a passionate and self-driven web developer with a solid foundation in HTML, CSS, JavaScript, and modern frameworks like React.js. I enjoy turning ideas into interactive and visually engaging web experiences. While I’m new to the industry, I’m committed to continuous learning and regularly build projects that challenge and expand my skills. I'm eager to collaborate, contribute, and grow in real-world development environments.
          `,
     skills: [
       "React",
